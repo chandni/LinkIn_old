@@ -1,0 +1,178 @@
+
+
+Processing ChatsController#index (for 127.0.0.1 at 2010-03-26 15:51:59) [GET]
+  [4;36;1mChat Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: chats: SELECT * FROM "chats" [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: chats: SELECT * FROM "chats" ):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+    /vendor/rails/activerecord/lib/active_record/base.rb:635:in `find_by_sql'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1490:in `find_every'
+    /vendor/rails/activerecord/lib/active_record/base.rb:589:in `find'
+    /app/controllers/chats_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/chandni/LinkIn/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (23.4ms)
+Rendered /home/chandni/LinkIn/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/chandni/LinkIn/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (36.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Incorrect database name '': CREATE DATABASE `` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE DATABASE `LinkIn_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (42.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateChats (20100326194009)
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE TABLE `chats` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (34.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326194009')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `chats`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `chats`[0m
+
+
+Processing ChatsController#index (for 127.0.0.1 at 2010-03-26 16:25:53) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChat Load (0.4ms)[0m   [0;1mSELECT * FROM `chats` [0m
+Rendering template within layouts/chats
+Rendering chats/index
+Completed in 10ms (View: 4, DB: 6) | 200 OK [http://localhost/chats]
+
+
+Processing ChatsController#new (for 127.0.0.1 at 2010-03-26 16:26:20) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChat Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `chats`[0m
+Rendering template within layouts/chats
+Rendering chats/new
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/chats/new]
+
+
+Processing ChatsController#create (for 127.0.0.1 at 2010-03-26 16:26:44) [POST]
+  Parameters: {"commit"=>"Create", "chat"=>{"user_id"=>"", "message"=>"hi"}, "authenticity_token"=>"423c0a3e6885ae0741f2ae52c498ab365369d403"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChat Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mChat Create (0.7ms)[0m   [0;1mINSERT INTO `chats` (`created_at`, `updated_at`, `user_id`, `message`) VALUES('2010-03-26 20:26:44', '2010-03-26 20:26:44', NULL, 'hi')[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+Redirected to #<Chat:0x7f4ea39db248>
+Completed in 19ms (DB: 9) | 302 Found [http://localhost/chats]
+
+
+Processing ChatsController#show (for 127.0.0.1 at 2010-03-26 16:26:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChat Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+  [4;35;1mChat Load (2.4ms)[0m   [0mSELECT * FROM `chats` WHERE (`chats`.`id` = 1) [0m
+Rendering template within layouts/chats
+Rendering chats/show
+Completed in 14ms (View: 4, DB: 3) | 200 OK [http://localhost/chats/1]
+
+
+Processing ChatsController#edit (for 127.0.0.1 at 2010-03-26 16:26:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChat Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+  [4;35;1mChat Load (0.1ms)[0m   [0mSELECT * FROM `chats` WHERE (`chats`.`id` = 1) [0m
+Rendering template within layouts/chats
+Rendering chats/edit
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/chats/1/edit]
+
+
+Processing ChatsController#update (for 127.0.0.1 at 2010-03-26 16:27:01) [PUT]
+  Parameters: {"commit"=>"Update", "chat"=>{"user_id"=>"", "message"=>"hiya"}, "authenticity_token"=>"423c0a3e6885ae0741f2ae52c498ab365369d403", "id"=>"1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChat Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+  [4;35;1mChat Load (0.1ms)[0m   [0mSELECT * FROM `chats` WHERE (`chats`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mChat Update (0.7ms)[0m   [0mUPDATE `chats` SET `updated_at` = '2010-03-26 20:27:01', `message` = 'hiya' WHERE `id` = 1[0m
+  [4;36;1mSQL (75.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Chat:0x7f4ea3bf7cc0>
+Completed in 146ms (DB: 77) | 302 Found [http://localhost/chats/1]
+
+
+Processing ChatsController#show (for 127.0.0.1 at 2010-03-26 16:27:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChat Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `chats`[0m
+  [4;36;1mChat Load (0.4ms)[0m   [0;1mSELECT * FROM `chats` WHERE (`chats`.`id` = 1) [0m
+Rendering template within layouts/chats
+Rendering chats/show
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://localhost/chats/1]
+
+
+Processing ChatsController#index (for 127.0.0.1 at 2010-03-26 16:27:08) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChat Load (0.4ms)[0m   [0mSELECT * FROM `chats` [0m
+Rendering template within layouts/chats
+Rendering chats/index
+  [4;36;1mChat Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `chats`[0m
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/chats]
