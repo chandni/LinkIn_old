@@ -40,6 +40,11 @@ class ChatsController < ApplicationController
   # POST /chats
   # POST /chats.xml
   def create
+
+    @chat = Chat.find(params[:chat_id])
+    @comment = @chat.comments.create(params[:comment])
+    redirect_to_chat_path(@chat)
+
     @chat = Chat.new(params[:chat])
 
     respond_to do |format|

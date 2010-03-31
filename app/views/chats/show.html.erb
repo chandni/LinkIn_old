@@ -8,6 +8,18 @@
   <%=h @chat.user_id %>
 </p>
 
+<h2>Comments</h2> 
+<%= render :partial => "comments/comment",
+           :collection => @chat.comments %>
 
-<%= link_to 'Edit', edit_chat_path(@chat) %> |
-<%= link_to 'Back', chats_path %>
+<h2>Add a comment:</h2>
+<%= render :partial => "comments/form", :locals => {:chat => @chat} %>
+
+<br />
+
+<%= link_to 'Edit Chat', edit_chat_path(@chat) %>  |
+<%= link_to 'Back to Chats', chats_path %> 
+
+
+
+

@@ -1,7 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :comments
+  map.resources :comments 
+  
 
-  map.resources :chats
+  map.resources :chats do |chat|
+    chat.resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -42,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
+  map.root :controller => "chats",:action => "index"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
